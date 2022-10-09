@@ -5,13 +5,13 @@
 
 ApolloCLI 중 GraphQL codegen feature 를 사용한 튜토리얼을 실습했습니다.
 
-1. GraphQL endpoint 를 사용해서 GraphQL schema 를 다운로드 받는다.
-2. 쿼리에 필요한 생성된 Typescript type 를 Apollo Client 프로젝트에 활용한다.
+1. GraphQL endpoint 를 사용해서 GraphQL schema 를 다운로드 받습니다.
+2. 쿼리에 필요한 생성된 Typescript type 를 Apollo Client 프로젝트에 활용합니다.
 
 ## 1. apollo codegen 이란?
 
 - graphQL 서버에서 만든 쿼리와 뮤테이션을 typescript 에서 활용하려면 사용할 여러가지 변수에 타입을 다시 지정해주어야 합니다.
-- `apollo codegen`을 사용하면 코드, tsx, 리액트 컴포넌트로 가서 쿼리와 뮤테이션을 찾고 자동으로 interface(typescript) 을 만들 수 있다.
+- `apollo codegen`을 사용하면 코드, tsx, 리액트 컴포넌트로 가서 쿼리와 뮤테이션을 찾고 자동으로 interface(typescript) 을 만들 수 있습니다.
 
 ## 2. 의존성 설치
 
