@@ -3,7 +3,6 @@
 >[TypeScript GraphQL Code Generator – Generate GraphQL Types with Apollo Codegen Tutorial](https://github.com/apollographql/ac3-state-management-examples/blob/master/apollo-remote-state-advanced-cache-apis/client/apollo.config.js)
 에 있는 소스코드를 클론해서 tutorial을 따라가며 정리한 자료입니다.
 
-ApolloCLI 중 GraphQL codegen feature 를 사용한 튜토리얼을 실습했습니다.
 
 1. GraphQL endpoint 를 사용해서 GraphQL schema 를 다운로드 받습니다.
 2. 쿼리에 필요한 생성된 Typescript type 를 Apollo Client 프로젝트에 활용합니다.
