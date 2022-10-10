@@ -1,7 +1,17 @@
 import React from 'react'
+import { Todos } from '../../models/Todos'
 
-export default function TodoList() {
+interface Props{
+  todos: Todos
+}
+
+export default function TodoList({todos}:Props) {
+
   return (
-    <div>TodoList</div>
+    <>
+    {todos.map(todo=> todo!==null && 
+      <div key={`todo-${todo.id}`}>{todo.text}</div>
+    )}
+    </>
   )
 }

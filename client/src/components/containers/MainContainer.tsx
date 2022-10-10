@@ -4,18 +4,25 @@ import TodoList from '../todo/TodoList'
 
 import { GET_ALL_TODOS } from '../../operations/queries/getAllTodos'
 import { getAllTodos } from '../../operations/queries/__generated__/getAllTodos'
+import { useAddTodo } from '../../operations/mutations/addTodo'
+import TodoSection from '../todo/TodoSection'
 
 export default function MainContainer() {
-    const {loading, data, error} = useQuery<getAllTodos>(GET_ALL_TODOS);
-    console.log(data);
+    const {loading: allTodosLoading, data : allTodosData, error : allTodosError} = useQuery<getAllTodos>(GET_ALL_TODOS);
+    const {mutate: addTodo, data : addTodoData, error: addTodoError} = useAddTodo();
 
-    if(loading) return <div>Loading...</div>
-    if(error) return <div>Error ocurred {JSON.stringify(error)}</div>
-    if(!data) return <div>None</div>
+    if(allTodosLoading) return <div>Loading...</div>
+    if(allTodosError) return <div>Error ocurred {JSON.stringify(allTodosError)}</div>
+    if(!allTodosData) return <div>None</div>
 
-    const todos = data.todos.edges.map((todo)=>todo?.node);
+    const todos = allTodosData.todos.edges.map((todo)=>todo? todo.node: null);
 
     return (
-        <div>MainContainer</div>
+        <TodoSection 
+            todos={todos}
+            actions={{
+                addTodo: (text:string)=>addTodo({variables: {text}})
+            }}
+        />
     )
 }

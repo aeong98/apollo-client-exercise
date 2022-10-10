@@ -12,7 +12,7 @@ export interface getAllTodos_todos_edges_node {
   id: number;
   text: string;
   completed: boolean;
-}
+} 
 
 export interface getAllTodos_todos_edges {
   __typename: "TodosEdge";
