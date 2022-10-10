@@ -1,4 +1,4 @@
-# Apollo Codegen Tutorial 따라하기
+# Apollo Client 연습
 
 >[TypeScript GraphQL Code Generator – Generate GraphQL Types with Apollo Codegen Tutorial](https://www.apollographql.com/blog/tooling/apollo-codegen/typescript-graphql-code-generator-generate-graphql-types/)
 에 있는 소스코드를 클론해서 tutorial을 따라가며 정리한 자료입니다.
