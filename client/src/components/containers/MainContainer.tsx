@@ -8,7 +8,9 @@ import { useAddTodo } from '../../operations/mutations/addTodo'
 import TodoSection from '../todo/TodoSection'
 
 export default function MainContainer() {
-    const {loading: allTodosLoading, data : allTodosData, error : allTodosError, refetch: refechAllTodos} = useQuery<getAllTodos>(GET_ALL_TODOS);
+    const {loading: allTodosLoading, data : allTodosData, error : allTodosError, refetch: refechAllTodos} = useQuery<getAllTodos>(GET_ALL_TODOS,{
+        fetchPolicy : 'network-only',
+    });
     const {mutate: addTodo, data : addTodoData, error: addTodoError} = useAddTodo();
 
     if(allTodosLoading) return <div>Loading...</div>

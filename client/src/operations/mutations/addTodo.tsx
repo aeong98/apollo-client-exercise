@@ -22,6 +22,12 @@ export const ADD_TODO = gql`
 
 export function useAddTodo(){
     const [mutate, {data, error}] = useMutation<AddTodo, AddTodoVariables>(ADD_TODO,{
+        refetchQueries: [{query: GET_ALL_TODOS}],
+        // true : mutation 이 완료되기 전에, refetchQueries 에 포함된 queries 을 업데이트 시켜줍니다. 
+        // (false: queries are refetched asynchronously)
+        awaitRefetchQueries: true,
+
+        // 아래는 클라이언트 local cache 를 업데이트 시켜주는 부분
         // update(cache, {data}){
         //     // 새로 서버에 요청한 todo
         //     const newTodo = data?.addTodo.todo;

@@ -14,7 +14,7 @@ interface Props{
 export default function TodoSection({todos, actions}:Props) {
   const onSubmit = (todo:string)=>{
     actions.addTodo(todo);
-    actions.refetchTodos();
+    // actions.refetchTodos();
   }
   return (
     <>
