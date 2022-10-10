@@ -1,6 +1,6 @@
 # Apollo Codegen Tutorial 따라하기
 
->[TypeScript GraphQL Code Generator – Generate GraphQL Types with Apollo Codegen Tutorial](https://github.com/apollographql/ac3-state-management-examples/blob/master/apollo-remote-state-advanced-cache-apis/client/apollo.config.js)
+>[TypeScript GraphQL Code Generator – Generate GraphQL Types with Apollo Codegen Tutorial](https://www.apollographql.com/blog/tooling/apollo-codegen/typescript-graphql-code-generator-generate-graphql-types/)
 에 있는 소스코드를 클론해서 tutorial을 따라가며 정리한 자료입니다.
 
 
